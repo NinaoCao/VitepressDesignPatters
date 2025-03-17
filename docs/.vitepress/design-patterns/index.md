@@ -29,7 +29,7 @@ Os padrões de design são divididos em três categorias principais:
   <PatternCard 
     title="Structural Patterns" 
     description="Explicam como montar objetos e classes em estruturas maiores, mantendo essas estruturas flexíveis e eficientes."
-    link="./design-patterns/structural/index.md"
+    link="/design-patterns/structural/"
     category="structural"
     icon="🔌" />
     
@@ -68,5 +68,4 @@ Os padrões de design são baseados em vários princípios fundamentais de desig
 - **Princípio da Segregação de Interface (ISP)**: Muitas interfaces específicas são melhores do que uma interface geral
 - **Princípio da Inversão de Dependência (DIP)**: Dependa de abstrações, não de implementações concretas
 
-Estes princípios, conhecidos como SOLID, formam a base para muitos dos padrões de design que você aprenderá neste guia.
-
+Estes princípios, conhecidos como SOLID, formam a base para muitos dos padrões de design que você aprenderá neste guia. 

@@ -1,0 +1,466 @@
+:root {
+  /* Cores principais - Azul claro e cores de destaque */
+  --dp-c-blue: #60a5fa;
+  --dp-c-blue-light: #93c5fd;
+  --dp-c-blue-lighter: #bfdbfe;
+  --dp-c-blue-dark: #3b82f6;
+  --dp-c-blue-darker: #2563eb;
+
+  --dp-c-orange: #fb923c;
+  --dp-c-orange-light: #fdba74;
+  --dp-c-orange-lighter: #fed7aa;
+  --dp-c-orange-dark: #f97316;
+  --dp-c-orange-darker: #ea580c;
+
+  --dp-c-green: #4ade80;
+  --dp-c-green-light: #86efac;
+  --dp-c-green-lighter: #bbf7d0;
+  --dp-c-green-dark: #22c55e;
+  --dp-c-green-darker: #16a34a;
+
+  /* Cores de fundo e texto */
+  --dp-c-bg: #121212;
+  --dp-c-bg-soft: #1e1e1e;
+  --dp-c-bg-mute: #2a2a2a;
+  --dp-c-text: #ffffff;
+  --dp-c-text-soft: #e0e0e0;
+  --dp-c-text-mute: #a0a0a0;
+
+  /* Substituir cores padrão do VitePress */
+  --vp-c-bg: var(--dp-c-bg);
+  --vp-c-bg-soft: var(--dp-c-bg-soft);
+  --vp-c-bg-mute: var(--dp-c-bg-mute);
+  --vp-c-bg-alt: #161616;
+
+  --vp-c-text-1: var(--dp-c-text);
+  --vp-c-text-2: var(--dp-c-text-soft);
+  --vp-c-text-3: var(--dp-c-text-mute);
+
+  --vp-c-brand: var(--dp-c-blue);
+  --vp-c-brand-light: var(--dp-c-blue-light);
+  --vp-c-brand-lighter: var(--dp-c-blue-lighter);
+  --vp-c-brand-dark: var(--dp-c-blue-dark);
+  --vp-c-brand-darker: var(--dp-c-blue-darker);
+
+  /* Cores de botões */
+  --vp-button-brand-bg: var(--dp-c-blue);
+  --vp-button-brand-hover-bg: var(--dp-c-blue-light);
+  --vp-button-brand-active-bg: var(--dp-c-blue-dark);
+
+  --vp-button-alt-bg: var(--dp-c-orange);
+  --vp-button-alt-hover-bg: var(--dp-c-orange-light);
+  --vp-button-alt-active-bg: var(--dp-c-orange-dark);
+
+  /* Personalização de fontes */
+  --vp-font-family-base: "Roboto", "Open Sans", sans-serif;
+  --vp-font-family-mono: "Fira Code", monospace;
+
+  /* Personalização de cabeçalhos */
+  --vp-home-hero-name-color: var(--dp-c-blue);
+  --vp-home-hero-image-background-image: linear-gradient(
+    135deg,
+    var(--dp-c-blue-light) 10%,
+    var(--dp-c-orange-light) 100%
+  );
+  --vp-home-hero-image-filter: blur(40px);
+
+  /* Cores de borda */
+  --vp-c-divider: rgba(255, 255, 255, 0.1);
+  --vp-c-divider-light: rgba(255, 255, 255, 0.05);
+
+  /* Cores de código */
+  --vp-code-block-bg: #1a1a1a;
+  --vp-code-color: #e0e0e0;
+}
+
+/* Forçar tema escuro */
+html {
+  background-color: var(--dp-c-bg);
+  color: var(--dp-c-text);
+}
+
+/* Layout da página inicial personalizado */
+.VPHomeHero .name,
+.VPHomeHero .text {
+  color: var(--dp-c-blue);
+}
+
+.VPHomeHero .tagline {
+  color: var(--dp-c-text-soft);
+}
+
+.VPFeature {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--dp-c-bg-soft);
+}
+
+.VPFeature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Personalização da barra lateral */
+.VPSidebar {
+  border-right: 1px solid var(--vp-c-divider);
+  background-color: var(--dp-c-bg);
+}
+
+.VPSidebarItem.is-active .link {
+  color: var(--dp-c-blue);
+  border-left: 2px solid var(--dp-c-blue);
+}
+
+/* Personalização da navegação */
+.VPNavBar {
+  border-bottom: 1px solid var(--vp-c-divider);
+  background-color: var(--dp-c-bg);
+}
+
+.VPNavBar .VPNavBarTitle .title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--dp-c-blue);
+}
+
+/* Personalização de blocos de código */
+.vp-code-group .tabs {
+  background-color: var(--vp-c-bg-soft);
+}
+
+.vp-code-group .tabs label.active {
+  border-bottom: 2px solid var(--dp-c-blue);
+}
+
+div[class*="language-"] {
+  background-color: var(--vp-code-block-bg);
+}
+
+/* Personalização de tabelas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  background-color: var(--dp-c-bg-soft);
+}
+
+th {
+  background-color: var(--dp-c-bg-mute);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  color: var(--dp-c-text);
+}
+
+td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--vp-c-divider);
+  color: var(--dp-c-text-soft);
+}
+
+tr:nth-child(even) {
+  background-color: var(--dp-c-bg-mute);
+}
+
+/* Personalização de diagramas e imagens */
+.pattern-diagram {
+  max-width: 100%;
+  margin: 2rem auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background-color: var(--dp-c-bg-soft);
+}
+
+/* Layout de grade para cartões de padrões */
+.pattern-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .pattern-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Estilo para categorias */
+.category-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--vp-c-divider);
+}
+
+.category-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.category-header.creational {
+  color: var(--dp-c-blue);
+}
+
+.category-header.structural {
+  color: var(--dp-c-orange);
+}
+
+.category-header.behavioral {
+  color: var(--dp-c-green);
+}
+
+.category-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+/* Estilos para a página inicial personalizada */
+.custom-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.benefit-card {
+  background-color: var(--dp-c-bg-soft);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--dp-c-blue);
+}
+
+.featured-patterns {
+  margin: 2rem 0;
+}
+
+.custom-layout h2 {
+  border-bottom: 2px solid var(--vp-c-divider);
+  padding-bottom: 0.5rem;
+  margin-top: 3rem;
+  color: var(--dp-c-blue);
+}
+
+@media (max-width: 768px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Estilos para o código */
+div[class*="language-"] {
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+/* Estilos para links */
+a {
+  color: var(--dp-c-blue);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--dp-c-blue-light);
+}
+
+/* Estilos para botões */
+.custom-button {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  background-color: var(--dp-c-blue);
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.custom-button:hover {
+  background-color: var(--dp-c-blue-light);
+}
+
+.custom-button.orange {
+  background-color: var(--dp-c-orange);
+}
+
+.custom-button.orange:hover {
+  background-color: var(--dp-c-orange-light);
+}
+
+/* Estilos para alertas */
+.custom-block {
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: var(--dp-c-bg-soft);
+}
+
+.custom-block.tip {
+  border-left: 4px solid var(--dp-c-blue);
+}
+
+.custom-block.warning {
+  border-left: 4px solid var(--dp-c-orange);
+}
+
+.custom-block.danger {
+  border-left: 4px solid #dc2626;
+}
+
+/* Estilos para cartões de padrões */
+.pattern-card {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1.5rem;
+  background-color: var(--dp-c-bg-soft);
+  border-left: 4px solid transparent;
+}
+
+.pattern-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.pattern-card.creational {
+  border-left-color: var(--dp-c-blue);
+}
+
+.pattern-card.structural {
+  border-left-color: var(--dp-c-orange);
+}
+
+.pattern-card.behavioral {
+  border-left-color: var(--dp-c-green);
+}
+
+.pattern-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  padding: 1rem;
+  font-size: 2rem;
+  background-color: var(--dp-c-bg-mute);
+}
+
+.pattern-card-content {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.pattern-card-title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--dp-c-text);
+}
+
+.pattern-card-description {
+  margin-bottom: 1rem;
+  color: var(--dp-c-text-soft);
+}
+
+.pattern-card-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: var(--dp-c-blue);
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.pattern-card.structural .pattern-card-link {
+  background-color: var(--dp-c-orange);
+}
+
+.pattern-card.behavioral .pattern-card-link {
+  background-color: var(--dp-c-green);
+}
+
+.pattern-card-link:hover {
+  opacity: 0.9;
+}
+
+.default-icon {
+  font-size: 2rem;
+}
+
+@media (max-width: 640px) {
+  .pattern-card {
+    flex-direction: column;
+  }
+
+  .pattern-card-icon {
+    width: 100%;
+    padding: 1rem 0;
+  }
+}
+
+/* Forçar tema escuro para elementos específicos */
+.VPContent {
+  background-color: var(--dp-c-bg);
+}
+
+.VPDoc {
+  background-color: var(--dp-c-bg);
+}
+
+.VPFooter {
+  background-color: var(--dp-c-bg);
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+.VPNavBarSearch {
+  background-color: var(--dp-c-bg-soft);
+}
+
+.VPNavBarMenuLink {
+  color: var(--dp-c-text);
+}
+
+.VPNavBarMenuLink:hover {
+  color: var(--dp-c-blue);
+}
+
+/* Ajustes para o botão de voltar ao topo */
+.back-to-top {
+  background-color: var(--dp-c-blue);
+  color: white;
+}
+
+.back-to-top:hover {
+  background-color: var(--dp-c-blue-light);
+}
+
